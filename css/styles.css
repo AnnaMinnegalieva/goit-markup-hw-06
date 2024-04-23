@@ -568,6 +568,10 @@ img {
   font-weight: 500;
 }
 
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #404bbf;
+}
 .btn-icon {
   fill: #fff;
   margin-left: 16px;
@@ -665,6 +669,7 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   height: 40px;
+  font-size: 12px;
   background-color: transparent;
   outline: transparent;
   padding-left: 38px;
@@ -757,6 +762,9 @@ img {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.modal-check:focus + .check-text > span {
+  border-color: #4D5AE5;
 }
 
 .link-policy {
