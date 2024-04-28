@@ -113,12 +113,6 @@ img {
   color: #404bbf;
 }
 
-.current {
-  position: relative;
-  color: #404bbf;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .header-nav-link.current::after {
   content: "";
   position: absolute;
@@ -163,6 +157,7 @@ img {
   max-height: 24px;
   background-color: transparent;
   margin-left: auto;
+  padding: 0;
 }
 
 .mob-menu {
@@ -233,6 +228,12 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+  position: relative;
+  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -970,7 +971,7 @@ img {
   justify-content: center;
 }
 
-.modal-check:checked + .check-text > span {
+.modal-check:checked + .check-text > .icon-vector {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -1028,6 +1029,10 @@ img {
   }
   .menu-open-btn {
     display: none;
+  }
+
+  .header {
+    padding: 0;
   }
 
   .header-container {
@@ -1092,11 +1097,6 @@ img {
     margin-bottom: 36px;
   }
 
-  .features {
-    padding-top: 110px;
-    padding-bottom: 82px;
-  }
-
   .features-list {
     gap: 72px 24px;
   }
@@ -1117,6 +1117,7 @@ img {
   .team-list {
     display: flex;
     gap: 64px 24px;
+    padding: 0 92px;
   }
 
   .team-item {
@@ -1144,6 +1145,7 @@ img {
     justify-content: flex-start;
     padding-left: 108px;
     gap: 72px 24px;
+    padding-right: 108px;
   }
 
   .footer-logo-text {
@@ -1179,6 +1181,10 @@ img {
     gap: 24px;
   }
 
+  .footer-input {
+    width: 264px;
+  }
+
   .footer-subs {
     align-items: flex-start;
   }
@@ -1211,7 +1217,6 @@ img {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    justify-content: flex-start;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1306,6 +1311,7 @@ img {
   .team-list {
     flex-wrap: nowrap;
     gap: 24px;
+    padding: 0;
   }
 
   .team-item {
@@ -1334,13 +1340,11 @@ img {
 
   .footer-container {
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     gap: 0;
-    align-items: center;
+    align-items: baseline;
   }
 
   .footer-logo-text {
